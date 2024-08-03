@@ -16,10 +16,10 @@ const App = () => {
         <Header />
         <main className="p-4 flex-1">
           <DashboardSummary />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 h-64">
-  <ActivityChart />
-  <Goals/>
-</div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4 h-64">
+        <ActivityChart />
+        <Goals />
+      </div>
 
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
