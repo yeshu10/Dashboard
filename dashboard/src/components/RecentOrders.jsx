@@ -1,4 +1,3 @@
-// src/components/RecentOrders.jsx
 import React from 'react';
 
 const orders = [
@@ -12,7 +11,7 @@ const orders = [
 
 const RecentOrders = () => {
   return (
-    <div className="bg-gray-800 p-4 rounded-lg">
+    <div className="bg-gray-800 p-4 rounded-lg col-span-2">
       <div className="text-xl font-semibold text-white mb-4">Recent Orders</div>
       <div className="overflow-auto">
         <table className="min-w-full text-gray-400">

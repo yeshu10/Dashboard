@@ -1,4 +1,3 @@
-// src/components/CustomerFeedback.jsx
 import React from 'react';
 
 const feedbacks = [
@@ -21,17 +20,23 @@ const feedbacks = [
 
 const CustomerFeedback = () => {
   return (
-    <div className="bg-gray-800 p-4 rounded-lg">
+    <div className="bg-gray-800 p-4 rounded-lg col-span-1">
       <div className="text-xl font-semibold text-white mb-4">Customer's Feedback</div>
       <div className="space-y-4">
         {feedbacks.map((feedback, index) => (
           <div key={index} className="text-gray-300">
-            <div className="font-semibold">{feedback.name}</div>
-            <div>{feedback.feedback}</div>
-            <div className="text-yellow-500">
+            <div className="flex items-center"><img
+            src="https://via.placeholder.com/40" // Replace with actual image URL
+            alt="Profile"
+            className="w-8 h-8 rounded-full object-cover"
+          /> <div className="font-semibold pl-2">{feedback.name}</div></div>
+            
+            <div className="text-yellow-400">
               {'★'.repeat(feedback.rating)}
               {'☆'.repeat(5 - feedback.rating)}
             </div>
+            <div>{feedback.feedback}</div>
+            
           </div>
         ))}
       </div>

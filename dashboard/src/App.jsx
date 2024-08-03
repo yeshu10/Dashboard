@@ -14,18 +14,22 @@ const App = () => {
       <Sidebar />
       <div className="flex-1 flex flex-col bg-gray-900 min-h-screen">
         <Header />
+        <div className="text-white font-bold pl-7  text-xl">Dashboard</div>
         <main className="p-4 flex-1">
           <DashboardSummary />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4 h-64">
         <ActivityChart />
         <Goals />
       </div>
-
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+        <RecentOrders />
+        <CustomerFeedback />
+      </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
           <RecentOrders />
             <CustomerFeedback />
-          </div>
+          </div> */}
           
         </main>
       </div>
