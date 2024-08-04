@@ -18,15 +18,16 @@ const DashboardSummary = () => {
                 <FaShoppingBasket className="text-blue-500" size={24} />
               </div>
               <div className="mt-2">Total Orders</div>
-            <div className="flex items-center justify-between w-full">
-            <div className="text-2xl font-bold">75</div>
-            <div className="flex items-center space-x-1 text-green-500 text-sm">
-            <BiCaretUp size={16} />
+              <div className="flex items-center mt-2 w-full">
+          <div className="text-2xl font-bold">75</div>
+          <div className="flex-grow"></div> {/* This div takes up the available space */}
+          <div className="flex items-center space-x-1 text-green-500 text-sm">
             <div>3%</div>
-          </div>
-        </div>
+            <BiCaretUp size={16} />        
             </div>
           </div>
+        </div>
+        </div>
         </div>
         <div className="bg-gray-800 p-4 rounded-lg text-white flex-1 min-w-[150px]">
           <div className="flex items-center gap-4">
@@ -35,7 +36,15 @@ const DashboardSummary = () => {
                 <TbShoppingBagCheck className="text-green-500" size={24} />
               </div>
               <div className="mt-2">Total Delivered</div>
-              <div className="text-2xl font-bold mt-1">70</div>
+             
+              <div className="flex items-center gap-4">
+      <div className=" inline-flex items-center justify-center">
+      <div className="text-2xl font-bold mt-1 flex-grow">70</div>
+      </div>      
+      <div className="bg-gray-500 bg-opacity-50 p-2 rounded-full inline-flex items-center justify-center">
+        <TbShoppingBagCheck className="text-white" size={24} />
+      </div>
+    </div>
             </div>
           </div>
         </div>
