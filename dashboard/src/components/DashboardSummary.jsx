@@ -7,7 +7,7 @@ import { ImArrowDown } from "react-icons/im";
 
 const DashboardSummary = () => {
   return (
-    <div className="flex flex-wrap gap-4">
+    <div className="flex flex-wrap gap-4 ">
       {/* First Four Divs */}
       <div className="flex flex-col sm:flex-row w-full sm:w-2/3 gap-4">
       <div className="relative bg-gray-800 p-4 rounded-lg text-white flex-1 min-w-[150px] flex flex-col">
