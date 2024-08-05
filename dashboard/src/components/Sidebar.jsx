@@ -2,6 +2,7 @@ import React from 'react';
 import { AiFillHome } from 'react-icons/ai';
 import { BiBarChartSquare, BiTask, BiWallet } from 'react-icons/bi';
 import { FaShoppingBag } from 'react-icons/fa';
+import { TbShoppingBagCheck } from 'react-icons/tb';
 
 const Sidebar = () => {
   return (
@@ -23,7 +24,7 @@ const Sidebar = () => {
           <BiWallet size={24} />
         </a>
         <a href="#" className="p-2 hover:bg-gray-700 rounded-full flex items-center justify-center shadow-sm">
-          <FaShoppingBag size={24} />
+          <TbShoppingBagCheck size={24} />
         </a>
       </nav>
     </div>

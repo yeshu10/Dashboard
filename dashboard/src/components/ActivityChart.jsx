@@ -1,6 +1,7 @@
 import React from 'react';
 import Chart from 'chart.js/auto';
 import { Bar } from 'react-chartjs-2';
+import { BiCaretDown } from 'react-icons/bi';
 
 const ActivityChart = () => {
   const chartData = {
@@ -58,7 +59,14 @@ const ActivityChart = () => {
 
   return (
     <div className="h-64 bg-gray-800 p-4 rounded-lg text-white col-span-2">
-      <h3 className="text-lg font-semibold mb-2">Activity</h3>
+    <div className="flex items-center justify-between">
+  <h3 className="text-lg font-semibold mb-2">Activity</h3>
+  <div className="flex items-center bg-gray-500 text-gray-800 rounded-full px-2 py-1">
+    <span className="text-sm text-white">Weekly</span>
+    <BiCaretDown size={16} className="ml-1 text-white" />
+  </div>
+</div>
+
       <div className="h-48"> {/* Adjust the height here */}
         <Bar data={chartData} options={chartOptions} height={300} /> {/* Adjust the height here */}
       </div>
