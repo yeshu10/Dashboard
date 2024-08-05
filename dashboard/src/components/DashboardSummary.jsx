@@ -12,13 +12,13 @@ const DashboardSummary = () => {
     <div className="flex gap-4">
       <div className="flex flex-wrap gap-4 flex-[2]">
         <div className="bg-gray-800 p-4 rounded-lg text-white flex-1 min-w-[150px]">
-          <div className="flex items-center gap-4">
-            <div className="flex flex-col items-center">
-              <div className="bg-blue-500 bg-opacity-50 p-2 rounded-sm inline-flex items-center justify-center">
+          {/* <div className="flex items-center gap-4"> */}
+            <div className="flex flex-col ">
+              <div className="bg-blue-500 bg-opacity-50 p-2 rounded-sm w-fit">
                 <FaShoppingBasket className="text-blue-500" size={24} />
               </div>
               <div className="mt-2">Total Orders</div>
-              <div className="flex items-center mt-2 w-full">
+              <div className="flex justify-between mt-2 w-full">
           <div className="text-2xl font-bold">75</div>
           <div className="flex-grow"></div> {/* This div takes up the available space */}
           <div className="flex items-center space-x-1 text-green-500 text-sm">
@@ -27,7 +27,7 @@ const DashboardSummary = () => {
             </div>
           </div>
         </div>
-        </div>
+        {/* </div> */}
         </div>
         <div className="bg-gray-800 p-4 rounded-lg text-white flex-1 min-w-[150px]">
           <div className="flex items-center gap-4">
