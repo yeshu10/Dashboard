@@ -57,12 +57,22 @@ const Dropdown = ({ selectedOption, setSelectedOption }) => {
 const ActivityChart = () => {
   const [selectedOption, setSelectedOption] = useState('Weekly');
 
+  // Adjusted chartData to include data for the full range from 5 to 27
   const chartData = {
-    labels: ['5', '9', '11', '13', '15', '17', '19', '21', '23', '25', '27'],
+    labels: [
+      '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', 
+      '15', '16', '17', '18', '19', '20', '21', '22', '23', 
+      '24', '25', '26', '27'
+    ], // X-axis labels
     datasets: [
       {
         label: 'Activity',
-        data: [12, 19, 3, 5, 20, 2, 3, 9, 6, 15, 2, 7, 8, 2, 16, 4, 9, 5, 8, 7, 6, 9, 4, 7, 10, 4, 7, 2, 9],
+        // Ensure there is data for each X-axis label
+        data: [
+          4,9,5,3,7,8,8,6,7,8,4,2,8,9,6,14, 12, 8, 5, 
+          7, 9, 11, 10, 8, 11, 17, 8, 7,6 
+           // Adjusted data points to match the labels
+        ], 
         backgroundColor: '#5B78F6',
         borderColor: '#5B78F6',
         borderWidth: 0.7,
@@ -76,19 +86,27 @@ const ActivityChart = () => {
     scales: {
       x: {
         type: 'linear',
-        beginAtZero: false, // Start the axis at 5
+        min: 5,
+        max: 27,
         ticks: {
-          min: 6, // Set the minimum value to 6
-          stepSize: 2, // Set the step size to 2
+          stepSize: 1,
+          color: '#D3D3D3', 
+          callback: (value) => {
+            // Display only the specific labels on the X-axis
+            const labels = ['5', '9', '11', '13', '15', '17', '19', '21', '23', '25', '27' ];
+            return labels.includes(value.toString()) ? value : '';
+          },
         },
       },
       y: {
         beginAtZero: true,
         ticks: {
           stepSize: 5,
+          color: '#D3D3D3', 
           callback: (value) => `${value}k`,
           font: {
-            size: 10,
+            size: 10,           
+
           },
         },
       },

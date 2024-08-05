@@ -1,5 +1,7 @@
 import React from 'react';
-import { FaEnvelope, FaBell, FaCog,  FaSearch } from 'react-icons/fa';
+import {   FaSearch, FaRegEnvelope } from 'react-icons/fa';
+import { IoSettingsOutline } from "react-icons/io5";
+import { GoBell } from "react-icons/go";
 
 const Header = () => {
   return (
@@ -20,13 +22,13 @@ const Header = () => {
       </div>
       <div className="flex items-center space-x-4">
         <a href="#" className="relative p-2 bg-gray-700 rounded-full flex items-center justify-center shadow-sm">
-          <FaEnvelope size={20} className="text-white" />
+          <FaRegEnvelope size={20} className="text-white" />
         </a>
         <a href="#" className="relative p-2 bg-gray-700 rounded-full flex items-center justify-center shadow-sm">
-          <FaCog size={20} className="text-white" />
+          <IoSettingsOutline size={20} className="text-white" />
         </a>
         <a href="#" className="relative p-2 bg-gray-700 rounded-full flex items-center justify-center shadow-sm">
-          <FaBell size={20} className="text-white" />
+          <GoBell  size={20} className="text-white" />
           <span className="absolute top-0 right-0 w-2.5 h-2.5 bg-blue-500 rounded-full"></span>
         </a>
         <a href="#" className="p-2 hover:bg-gray-700 rounded-full flex items-center justify-center shadow-sm">

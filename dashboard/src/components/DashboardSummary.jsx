@@ -3,6 +3,7 @@ import { FaShoppingBasket, FaDollarSign } from 'react-icons/fa';
 import { TbShoppingBagCheck, TbShoppingBagX } from "react-icons/tb";
 import { BiCaretDown, BiCaretUp } from "react-icons/bi";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
+import { ImArrowDown } from "react-icons/im";
 
 const DashboardSummary = () => {
   return (
@@ -10,7 +11,7 @@ const DashboardSummary = () => {
       {/* First Four Divs */}
       <div className="flex flex-col sm:flex-row w-full sm:w-2/3 gap-4">
       <div className="relative bg-gray-800 p-4 rounded-lg text-white flex-1 min-w-[150px] flex flex-col">
-  <div className="bg-blue-500 bg-opacity-50 p-2 rounded-sm w-fit">
+  <div className="bg-blue-500 bg-opacity-50 p-2 rounded-lg w-fit">
     <FaShoppingBasket className="text-blue-500" size={24} />
   </div>
   <div className="mt-2 text-sm md:text-base">Total Orders</div>
@@ -26,7 +27,7 @@ const DashboardSummary = () => {
 </div>
 
 <div className="relative bg-gray-800 p-4 rounded-lg text-white flex-1 min-w-[150px] flex flex-col">
-  <div className="bg-green-500 bg-opacity-50 p-2 rounded-sm w-fit">
+  <div className="bg-green-500 bg-opacity-50 p-2 rounded-lg w-fit">
     <TbShoppingBagCheck className="text-green-500" size={24} />
   </div>
   <div className="mt-2 text-sm md:text-base">Total Delivered</div>
@@ -42,7 +43,7 @@ const DashboardSummary = () => {
 </div>
 
         <div className="relative bg-gray-800 p-4 rounded-lg text-white flex-1 min-w-[150px] flex flex-col">
-  <div className="bg-red-500 bg-opacity-50 p-2 rounded-sm w-fit">
+  <div className="bg-red-500 bg-opacity-50 p-2 rounded-lg w-fit">
     <TbShoppingBagX className="text-red-500" size={24} />
   </div>
   <div className="mt-2 text-sm md:text-base">Total Cancelled</div>
@@ -57,15 +58,21 @@ const DashboardSummary = () => {
   </div>
 </div>
 <div className="relative bg-gray-800 p-4 rounded-lg text-white flex-1 min-w-[150px] flex flex-col">
-  <div className="bg-pink-500 bg-opacity-50 p-2 rounded-sm w-fit">
-    <FaDollarSign className="text-pink-500" size={24} />
+<div className="bg-pink-500 bg-opacity-50 p-2 rounded-lg w-fit flex items-center min-w-7">
+  <div className="flex flex-col items-center mr-2">
+    <FaDollarSign className="text-pink-500" size={15} />
+    <ImArrowDown className="text-pink-500 mt-1" size={18} /> {/* Arrow below the dollar icon */}
   </div>
+  <ImArrowDown className="text-pink-500" size={15} /> {/* Arrow to the right */}
+</div>
+
   <div className="mt-2 text-sm md:text-base">Total Revenue</div>
   <div className="flex flex-col justify-end h-full mt-2">
     <div className="flex justify-between items-center">
       <div className="text-xl md:text-2xl font-bold">$12K</div>
       <div className="flex items-center space-x-1 text-red-500 text-sm md:text-base">
         <BiCaretDown size={16} />
+
         <div>3%</div>
       </div>
     </div>
