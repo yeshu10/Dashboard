@@ -4,17 +4,17 @@ const feedbacks = [
   {
     name: 'Jenny Wilson',
     feedback: 'The food was excellent and so was the service. I had the mushroom risotto with scallops which was awesome. I had a burger with greens (gluten-free) which was also very good. They were very conscientious about gluten allergies.',
-    rating: 5,
+    rating: 4,
   },
   {
     name: 'Dianne Russell',
     feedback: 'We enjoyed the Eggs Benedict served on homemade focaccia bread and hot coffee. Perfect service.',
-    rating: 4,
+    rating: 5,
   },
   {
     name: 'Devon Lane',
     feedback: 'Normally wings are wings, but theirs are lean meaty and tender, and they were very well-seasoned.',
-    rating: 4,
+    rating: 3,
   },
   {
     name: 'Alex Smith',
@@ -43,7 +43,7 @@ const CustomerFeedback = () => {
               />
               <div className="font-semibold pl-2">{feedback.name}</div>
             </div>
-            <div className="text-yellow-400 mb-2">
+            <div className="text-yellow-400 mb-2 text-2xl">
               {'★'.repeat(feedback.rating)}
               {'☆'.repeat(5 - feedback.rating)}
             </div>
