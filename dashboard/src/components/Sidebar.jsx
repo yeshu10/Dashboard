@@ -3,13 +3,15 @@ import { AiFillHome } from 'react-icons/ai';
 import { BiBarChartSquare, BiTask, BiWallet } from 'react-icons/bi';
 import { TbShoppingBagCheck } from 'react-icons/tb';
 import { RiLogoutCircleRLine } from 'react-icons/ri';
+import logo from '../assets/logo.jpg'; 
 
 const Sidebar = () => {
   return (
     <div className="w-16 bg-gray-900 text-white flex flex-col h-fullscreen">
       {/* Header Section */}
       <div className="flex items-center justify-center h-16 bg-gray-900 text-2xl font-bold">
-        <AiFillHome className="text-blue-400" size={24} />
+      <img src={logo} alt="Logo" className="w-8 h-8 object-cover" />
+        {/* <AiFillHome className="text-blue-400" size={24} /> */}
       </div>
       
       {/* Main Navigation Section */}
