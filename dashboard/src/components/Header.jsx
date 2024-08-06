@@ -33,7 +33,7 @@ const Header = () => {
         </a>
         <a href="#" className="p-2 hover:bg-gray-700 rounded-full flex items-center justify-center shadow-sm">
           <img
-            src="https://via.placeholder.com/40" 
+            src="https://randomuser.me/api/portraits/women/17.jpg" 
             alt="Profile"
             className="w-10 h-10 rounded-full object-cover"
           />

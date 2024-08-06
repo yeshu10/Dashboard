@@ -1,12 +1,12 @@
 import React from 'react';
 
 const orders = [
-  { customer: 'Wade Warren', orderNo: '15478256', amount: '$124.00', status: 'Delivered', image: 'https://via.placeholder.com/40' },
-  { customer: 'Jane Cooper', orderNo: '48967586', amount: '$305.02', status: 'Delivered', image: 'https://via.placeholder.com/40' },
-  { customer: 'Guy Hawkins', orderNo: '78995215', amount: '$45.88', status: 'Cancelled', image: 'https://via.placeholder.com/40' },
-  { customer: 'Kristin Watson', orderNo: '20967532', amount: '$65.00', status: 'Pending', image: 'https://via.placeholder.com/40' },
-  { customer: 'Cody Fisher', orderNo: '95715620', amount: '$545.00', status: 'Delivered', image: 'https://via.placeholder.com/40' },
-  { customer: 'Savannah Nguyen', orderNo: '78514568', amount: '$128.20', status: 'Delivered', image: 'https://via.placeholder.com/40' },
+  { customer: 'Wade Warren', orderNo: '15478256', amount: '$124.00', status: 'Delivered', image: 'https://randomuser.me/api/portraits/men/33.jpg' },
+  { customer: 'Jane Cooper', orderNo: '48967586', amount: '$305.02', status: 'Delivered', image: 'https://randomuser.me/api/portraits/men/28.jpg' },
+  { customer: 'Guy Hawkins', orderNo: '78995215', amount: '$45.88', status: 'Cancelled', image: 'https://randomuser.me/api/portraits/men/14.jpg' },
+  { customer: 'Kristin Watson', orderNo: '20967532', amount: '$65.00', status: 'Pending', image: 'https://randomuser.me/api/portraits/men/9.jpg' },
+  { customer: 'Cody Fisher', orderNo: '95715620', amount: '$545.00', status: 'Delivered', image: 'https://randomuser.me/api/portraits/women/90.jpg' },
+  { customer: 'Savannah Nguyen', orderNo: '78514568', amount: '$128.20', status: 'Delivered', image: 'https://randomuser.me/api/portraits/men/6.jpg' },
 ];
 
 const getStatusClasses = (status) => {
