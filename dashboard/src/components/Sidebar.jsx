@@ -8,7 +8,7 @@ import logo from '../assets/logo.jpg';
 const Sidebar = ({ isOpen }) => {
   return (
     <div
-      className={`fixed top-0 left-0 w-16 bg-gray-900 text-white flex flex-col h-screen transition-transform duration-300 ${
+      className={`fixed top-0 left-0 z-[9999] w-16 bg-gray-900 text-white flex flex-col h-screen transition-transform duration-300 ${
         isOpen ? 'translate-x-0' : '-translate-x-16'
       } md:translate-x-0 md:relative md:flex md:w-16`}
     >
