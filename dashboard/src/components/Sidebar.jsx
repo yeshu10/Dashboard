@@ -3,7 +3,7 @@ import { AiFillHome } from 'react-icons/ai';
 import { BiBarChartSquare, BiTask, BiWallet } from 'react-icons/bi';
 import { TbShoppingBagCheck } from 'react-icons/tb';
 import { RiLogoutCircleRLine } from 'react-icons/ri';
-import logo from '../assets/logo.jpg';
+import logo from '../assets/logo.jpeg';
 
 const Sidebar = ({ isOpen }) => {
   return (
