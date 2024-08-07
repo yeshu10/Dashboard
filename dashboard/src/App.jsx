@@ -30,7 +30,7 @@ const App = () => {
             <ActivityChart />
             <Goals />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:gap-4 sm:gap-1 mt-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-1 mt-4">
             <RecentOrders />
             <CustomerFeedback />
           </div>
