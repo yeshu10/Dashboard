@@ -8,7 +8,7 @@ const Header = ({ onMenuClick }) => {
   return (
     <header className="bg-gray-900 p-4 flex items-center justify-between shadow-md">
 
-      <div className="flex items-center space-x-4">
+      <div className="flex items-center space-x-0">
         {/* Toggle Button (for mobile) */}
         <button
           onClick={onMenuClick}
