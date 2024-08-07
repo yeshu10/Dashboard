@@ -46,7 +46,7 @@ const RecentOrders = () => {
                 <td className="py-4 px-4">{order.orderNo}</td>
                 <td className="py-4 px-4">{order.amount}</td>
                 <td className="py-4 px-4">
-                  <span className={`inline-block px-2 py-1 rounded-full ${getStatusClasses(order.status)}`}>
+                  <span className={`inline-block px-2 py-1 rounded-full text-xs ${getStatusClasses(order.status)}`}>
                     {order.status}
                   </span>
                 </td>
