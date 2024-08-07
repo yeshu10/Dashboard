@@ -2,13 +2,23 @@ import React from 'react';
 import { FaSearch, FaRegEnvelope } from 'react-icons/fa';
 import { IoSettingsOutline } from 'react-icons/io5';
 import { GoBell } from 'react-icons/go';
+import { AiOutlineMenu } from 'react-icons/ai';
 
-const Header = () => {
+const Header = ({ onMenuClick }) => {
   return (
     <header className="bg-gray-900 p-4 flex items-center justify-between shadow-md">
-      {/* Search Container */}
-      <div className="flex items-center flex-grow max-w-xs w-full">
-        <div className="relative w-full">
+      {/* Logo and Search Container */}
+      <div className="flex items-center space-x-4">
+        {/* Toggle Button (for mobile) */}
+        <button
+          onClick={onMenuClick}
+          className="block md:hidden left-5 p-4 bg-gray-700 rounded-full flex items-center justify-center shadow-sm"
+        >
+          <AiOutlineMenu size={24} className="text-white" />
+        </button>
+        
+        {/* Search Box */}
+        <div className="relative flex-grow">
           <input
             type="text"
             placeholder="Search"

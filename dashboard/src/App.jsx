@@ -1,5 +1,4 @@
-// src/App.jsx
-import React from 'react';
+import React, { useState } from 'react';
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
 import DashboardSummary from './components/DashboardSummary';
@@ -9,28 +8,28 @@ import CustomerFeedback from './components/CustomerFeedback';
 import Goals from './components/Goals';
 
 const App = () => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
   return (
     <div className="flex">
-      <Sidebar />
+      <Sidebar isOpen={isSidebarOpen} />
       <div className="flex-1 flex flex-col bg-gray-900 min-h-screen">
-        <Header />
-        <div className="text-white font-bold pl-7  text-2xl">Dashboard</div>
+        <Header onMenuClick={toggleSidebar} />
+        <div className="text-white font-bold pl-7 text-2xl">Dashboard</div>
         <main className="p-4 flex-1">
           <DashboardSummary />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4 h-64">
-        <ActivityChart />
-        <Goals />
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
-        <RecentOrders />
-        <CustomerFeedback />
-      </div>
-          
-          {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-          <RecentOrders />
+            <ActivityChart />
+            <Goals />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+            <RecentOrders />
             <CustomerFeedback />
-          </div> */}
-          
+          </div>
         </main>
       </div>
     </div>
