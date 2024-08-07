@@ -7,12 +7,11 @@ import { AiOutlineMenu } from 'react-icons/ai';
 const Header = ({ onMenuClick }) => {
   return (
     <header className="bg-gray-900 p-4 flex items-center justify-between shadow-md">
-
-      <div className="flex items-center space-x-0">
+      <div className="flex items-center space-x-2 md:space-x-4">
         {/* Toggle Button (for mobile) */}
         <button
           onClick={onMenuClick}
-          className="block md:hidden left-5 p-4 bg-gray-700 rounded-full flex items-center justify-center shadow-sm"
+          className="block md:hidden p-2 bg-gray-700 rounded-full flex items-center justify-center shadow-sm"
         >
           <AiOutlineMenu size={24} className="text-white" />
         </button>
@@ -32,7 +31,7 @@ const Header = ({ onMenuClick }) => {
       </div>
       
       {/* Icons Container */}
-      <div className="flex items-center space-x-3 ml-2">
+      <div className="flex items-center space-x-2 md:space-x-3 ml-2">
         <a href="#" className="relative p-2 bg-gray-700 rounded-full flex items-center justify-center shadow-sm">
           <FaRegEnvelope size={20} className="text-white" />
         </a>
