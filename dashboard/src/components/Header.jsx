@@ -7,7 +7,7 @@ import { AiOutlineMenu } from 'react-icons/ai';
 const Header = ({ onMenuClick }) => {
   return (
     <header className="bg-gray-900 p-4 flex items-center justify-between shadow-md">
-      {/* Logo and Search Container */}
+
       <div className="flex items-center space-x-4">
         {/* Toggle Button (for mobile) */}
         <button

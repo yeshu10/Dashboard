@@ -14,15 +14,19 @@ const App = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
+  const closeSidebar = () => {
+    setIsSidebarOpen(false);
+  };
+
   return (
     <div className="flex">
-      <Sidebar isOpen={isSidebarOpen} />
+      <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
       <div className="flex-1 flex flex-col bg-gray-900 min-h-screen">
         <Header onMenuClick={toggleSidebar} />
         <div className="text-white font-bold pl-7 text-2xl">Dashboard</div>
         <main className="p-4 flex-1">
           <DashboardSummary />
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4 h-64">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
             <ActivityChart />
             <Goals />
           </div>

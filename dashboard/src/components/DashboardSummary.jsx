@@ -61,9 +61,9 @@ const DashboardSummary = () => {
 <div className="bg-pink-500 bg-opacity-50 p-2 rounded-lg w-fit flex items-center min-w-7">
   <div className="flex flex-col items-center mr-2 space-x-0">
     <FaDollarSign className="text-pink-500" size={12} />
-    <ImArrowDown className="text-pink-500 mt-1" size={10} /> {/* Arrow below the dollar icon */}
+    <ImArrowDown className="text-pink-500 mt-1" size={10} /> 
   </div>
-  <ImArrowDown className="text-pink-500" size={12} /> {/* Arrow to the right */}
+  <ImArrowDown className="text-pink-500" size={12} /> 
 </div>
 
   <div className="mt-2 text-sm md:text-base">Total Revenue</div>

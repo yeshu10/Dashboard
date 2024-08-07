@@ -4,15 +4,26 @@ import { BiBarChartSquare, BiTask, BiWallet } from 'react-icons/bi';
 import { TbShoppingBagCheck } from 'react-icons/tb';
 import { RiLogoutCircleRLine } from 'react-icons/ri';
 import logo from '../assets/logo.jpeg';
+import { IoClose } from 'react-icons/io5'; // Import close icon
 
-const Sidebar = ({ isOpen }) => {
+const Sidebar = ({ isOpen, onClose }) => {
   return (
     <div
-      className={`fixed top-0 left-0 z-[9999] w-16 h-fullscreen bg-gray-900 text-white flex flex-col transition-transform duration-300 ${
+      className={`fixed top-0 left-0 z-[9999] w-16 bg-gray-900 text-white flex flex-col transition-transform duration-300 ${
         isOpen ? 'translate-x-0' : '-translate-x-16'
       } md:translate-x-0 md:relative md:flex md:w-16`}
        
     >
+      {/* Close Button for Small Screens */}
+      {isOpen && (
+        <button
+          onClick={onClose}
+          className="absolute top-2 right-2 text-white text-xl md:hidden"
+        >
+          <IoClose />
+        </button>
+      )}
+
       {/* Main Navigation Section */}
       <div className="flex items-center justify-center h-16 bg-gray-900 text-2xl font-bold">
         <img src={logo} alt="Logo" className="w-8 h-8 object-cover" />
